@@ -1,0 +1,41 @@
+:root {
+  --bg: #fbfaf8;
+  --surface: #ffffff;
+  --ink: #1e2530;
+  --ink-dim: #5b6472;
+  --border: #e4e1da;
+  --accent: #2a6f6f;
+  --accent-soft: #eaf3f2;
+}* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+body { 
+  background: var(--bg); 
+  color: var(--ink); 
+  font-family: 'Inter', sans-serif; 
+  line-height: 1.7; 
+}
+
+h1, h2, h3, h4 { 
+  font-family: 'Source Serif 4', serif; 
+  font-weight: 600; 
+  color: var(--ink); 
+}
+
+a { 
+  color: inherit; 
+  text-decoration: none; 
+}
+
+section { 
+  padding: 70px 8%; 
+  max-width: 920px; 
+  margin: 0 auto; 
+}
