@@ -408,3 +408,44 @@ footer {
   font-size: 0.82rem;
   border-top: 1px solid var(--border);
 }
+@media (max-width: 768px) {
+  nav {
+    padding: 16px 6%;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 6%;
+    right: 6%;
+    padding: 18px;
+    flex-direction: column;
+    gap: 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  section, .hero {
+    padding: 56px 6%;
+  }
+
+  .sw-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
