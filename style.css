@@ -370,3 +370,41 @@ h4.skill-group {
 .cert-item a:hover {
   text-decoration: underline;
 }
+.contact {
+  text-align: left;
+  padding-top: 70px;
+  padding-bottom: 90px;
+}
+
+.contact p {
+  color: var(--ink-dim);
+  margin-bottom: 28px;
+  max-width: 560px;
+}
+
+.social-row {
+  display: flex;
+  gap: 22px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.social-row a {
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+}
+
+.social-row a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+footer {
+  text-align: center;
+  padding: 26px;
+  color: var(--ink-dim);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+}
