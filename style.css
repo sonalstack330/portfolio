@@ -289,3 +289,48 @@ h4.skill-group {
   background: var(--accent);
   border-radius: 50%;
 }
+.sw-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.sw-card h4 {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.sw-card ul {
+  list-style: none;
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+}
+
+.sw-card li {
+  margin-bottom: 8px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.sw-card li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+.hobby-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.hobby-pill {
+  padding: 9px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.87rem;
+  color: var(--ink-dim);
+}
