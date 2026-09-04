@@ -334,3 +334,39 @@ h4.skill-group {
   font-size: 0.87rem;
   color: var(--ink-dim);
 }
+.cert-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.cert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cert-item .cert-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.cert-item .cert-issuer {
+  color: var(--ink-dim);
+  font-size: 0.82rem;
+}
+
+.cert-item a {
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+.cert-item a:hover {
+  text-decoration: underline;
+}
