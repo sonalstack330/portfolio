@@ -416,6 +416,23 @@ footer {
   font-size: 0.82rem;
   border-top: 1px solid var(--border);
 }
+.tech-stack { 
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:8px; 
+  margin-top:16px; 
+  padding-top:14px; 
+  border-top:1px solid var(--border); 
+}
+.tech-stack span {
+  font-size: .72rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
 @media (max-width: 768px) {
   nav {
     padding: 16px 6%;
