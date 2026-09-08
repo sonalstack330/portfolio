@@ -35,9 +35,17 @@ a {
 }
 
 section { 
-  padding: 70px 8%; 
-  max-width: 920px; 
+  padding: 28px 8%; 
+  max-width: 1200px; 
   margin: 0 auto; 
+  position: relative;
+}
+.section-label {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
 }
 
 nav {
@@ -441,6 +449,9 @@ footer {
 
   .sw-grid {
     grid-template-columns: 1fr;
+  }
+  section { 
+    padding: 24px 6%; 
   }
 }
 
