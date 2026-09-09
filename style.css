@@ -95,9 +95,9 @@ nav {
 }
 
 .hero {
-  max-width: 920px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 8% 60px;
+  padding: 80px 8% 40px;
 }
 
 .hero-tag {
