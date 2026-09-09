@@ -6,6 +6,7 @@
   --border: #e4e1da;
   --accent: #2a6f6f;
   --accent-soft: #eaf3f2;
+  --accent-border: #2a6f6f35;
 }* { 
   margin: 0; 
   padding: 0; 
@@ -142,25 +143,44 @@ nav {
   color: #fff;
 }
 
-.btn-primary:hover {
-  background: #215a5a;
-}
-
 .btn-secondary {
   background: transparent;
   border: 1px solid var(--border);
   color: var(--ink);
 }
-
-.btn-secondary:hover {
-  border-color: var(--accent);
+/* every button in these rows starts white with a teal outline */
+.btn-row .btn,
+.contact-links .btn {
+  background: #fff;
   color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+/* the default (highlighted) button: View Projects and Email Me */
+.btn-row .btn-primary,
+.contact-links .btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* when the mouse is anywhere on the row, the default button turns white */
+.btn-row:hover .btn-primary,
+.contact-links:hover .btn-primary {
+  background: #fff;
+  color: var(--accent);
+}
+
+/* the button being hovered turns teal (keep this rule last) */
+.btn-row .btn:hover,
+.contact-links .btn:hover {
+  background: var(--accent);
+  color: #fff;
 }
 .section-label {
   color: var(--accent);
-  font-size: 0.82rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-size: 0.76rem;
+  font-weight: 500;
+  margin-bottom: 6px;
 }
 
 .section-title {
@@ -219,20 +239,51 @@ p.body-text {
 }
 
 .skill-pill {
-  padding: 7px 15px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  font-size: 0.85rem;
-  color: var(--ink-dim);
-  background: var(--surface);
+  padding: 3px 10px;
+  font-size: .72rem;
+  color: #2a7070;
+  background: #2a707014;
+  border: 1px solid #2a707035;
+  border-radius: 14px;
+  transition: .2s;
 }
+.skill-pill:hover { background: #2a7070; color: #fff; transform: translateY(-2px); }
+
+.skill-pill.blue { color: #2b6f9e; background: #2b6f9e14; border-color: #2b6f9e35; }
+
+.skill-pill.blue:hover { background: #2b6f9e; color: #fff; }
 
 h4.skill-group {
   margin-top: 22px;
   font-size: 0.92rem;
   color: var(--ink);
+  color: #2a7070;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
 }
 
+.skill-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 22px 24px;
+  transition: border-color 0.2s;
+}
+
+.skill-card:hover {
+  border-color: var(--accent);
+}
+
+.skill-card h4.skill-group {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 1rem;
+  color: var(--ink);
+}
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -311,22 +362,24 @@ h4.skill-group {
 
 .sw-card ul {
   list-style: none;
-  color: var(--ink-dim);
-  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin-top: 4px;
 }
 
 .sw-card li {
-  margin-bottom: 8px;
-  padding-left: 16px;
-  position: relative;
-}
-
-.sw-card li::before {
-  content: '–';
-  position: absolute;
-  left: 0;
+   position: static;
+  margin: 0;
+  padding: 7px 16px;
+  font-size: .88rem;
   color: var(--accent);
-}
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  border-radius: 20px;
+  }
+
 .hobby-grid {
   display: flex;
   flex-wrap: wrap;
@@ -432,6 +485,13 @@ footer {
   padding: 3px 10px;
   border-radius: 20px;
 }
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
 
 @media (max-width: 768px) {
   nav {
@@ -457,8 +517,22 @@ footer {
   }
 
   .nav-toggle {
-    display: block;
-  }
+  display: block;
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 1.1rem;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-toggle:hover {
+  background: #fff;
+  color: var(--accent);
+  border-color: var(--accent);
+}
 
   section, .hero {
     padding: 56px 6%;
