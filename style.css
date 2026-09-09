@@ -29,14 +29,17 @@ h1, h2, h3, h4,
 .logo {
   font-family: var(--font-heading);
 }
-* {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+body, p, a, li, span, div, button {
+  font-family: 'Inter', sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4,
+.section-title,
+.logo,
+.edu-card .degree {
+  font-family: 'Source Serif 4', serif;
   font-weight: 500;
 }
-
 a { 
   color: inherit; 
   text-decoration: none; 
