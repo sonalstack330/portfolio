@@ -67,14 +67,15 @@ nav {
   align-items: center;
   padding: 20px 8%;
   z-index: 100;
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
+  background: var(--accent);
+  border-bottom: 1px solid var(--accent);
 }
 
 .logo {
   font-family: 'Source Serif 4', serif;
   font-weight: 600;
   font-size: 1.1rem;
+  color: #fff;
 }
 
 .nav-links {
@@ -86,11 +87,14 @@ nav {
 .nav-links a {
   font-size: 0.88rem;
   color: var(--ink-dim);
-  transition: color 0.2s;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
 }
 
 .nav-links a:hover {
-  color: var(--accent);
+  color: #fff;
+  border-bottom-color: #fff;
 }
 
 .nav-toggle {
@@ -560,4 +564,20 @@ footer {
   html {
     scroll-behavior: auto;
   }
+}
+/* nav bar link colors */
+nav .nav-links a {
+  color: #fff;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+nav .nav-links a:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+/* make the hobbies card smaller */
+#hobbies .skills-grid {
+  grid-template-columns: minmax(260px, 320px);
 }
